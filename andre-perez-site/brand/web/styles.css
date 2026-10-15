@@ -1,0 +1,34 @@
+/* Andre Perez / Bold & Expressive / Brand kit v1 */
+@font-face {font-family: "Sora"; src: url("../fonts/Sora.ttf") format("truetype"); font-style: normal; font-weight: 100 900; font-display: swap;}
+@font-face {font-family: "Manrope"; src: url("../fonts/Manrope.ttf") format("truetype"); font-style: normal; font-weight: 200 800; font-display: swap;}
+:root {
+  --ap-background: #F5F4F0; --ap-text: #141820; --ap-primary: #2449E8;
+  --ap-on-primary: #F5F4F0; --ap-accent: #DDF06A; --ap-secondary: #CABBEA; --ap-surface: #FFFFFF;
+  --ap-display: "Sora", Arial, sans-serif;
+  --ap-body: "Manrope", Arial, sans-serif;
+  --ap-radius: 4px; --ap-content-width: 1120px;
+  --ap-space-1: 4px; --ap-space-2: 8px; --ap-space-3: 12px; --ap-space-4: 16px;
+  --ap-space-6: 24px; --ap-space-8: 32px; --ap-space-12: 48px; --ap-space-16: 64px; --ap-space-24: 96px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ap-background); color: var(--ap-text); font-family: var(--ap-body); font-size: 18px; line-height: 1.6; }
+.ap-container { max-width: var(--ap-content-width); margin: auto; padding-inline: 48px; }
+h1,h2,h3 { font-family: var(--ap-display); font-weight: 600; line-height: 1.15; margin: 0 0 24px;  }
+h1 { font-size: clamp(40px, 5vw, 64px); }
+h2 { font-size: clamp(28px, 3vw, 36px); }
+h3 { font-size: 24px; line-height: 1.3; }
+p { max-width: 65ch; margin: 0 0 24px; }
+a { color: var(--ap-primary); text-underline-offset: .2em; }
+img { display: block; max-width: 100%; height: auto; }
+.ap-logo { width: 220px; min-width: 160px; }
+.ap-eyebrow { font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--ap-primary); }
+.ap-button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 24px; border: 2px solid var(--ap-primary); border-radius: var(--ap-radius); background: var(--ap-primary); color: var(--ap-on-primary); font: 600 18px/1.3 var(--ap-body); text-decoration: none; }
+.ap-button-secondary { background: transparent; color: var(--ap-primary); }
+.ap-button:hover { text-decoration: underline; }
+:focus-visible { outline: 3px solid var(--ap-primary); outline-offset: 4px; }
+.ap-surface { padding: 32px; border-radius: var(--ap-radius); background: var(--ap-surface); }
+.ap-small { font-size: 14px; line-height: 1.5; }
+.ap-inverse { background: var(--ap-primary); color: var(--ap-on-primary); }
+.ap-inverse a { color: inherit; }
+.ap-inverse :focus-visible { outline-color: var(--ap-on-primary); }
+@media (max-width: 640px) { .ap-container { padding-inline: 24px; } .ap-surface { padding: 24px; } }

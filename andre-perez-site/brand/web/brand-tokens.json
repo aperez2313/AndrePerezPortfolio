@@ -1,0 +1,61 @@
+{
+  "brand": "Andre Perez",
+  "direction": "Bold & Expressive",
+  "selected": true,
+  "tagline": "Better systems. Smoother operations.",
+  "contact": {
+    "email": "helloandreperez@outlook.com",
+    "linkedin": "https://www.linkedin.com/in/andregperez"
+  },
+  "colors": {
+    "background": "#F5F4F0",
+    "text": "#141820",
+    "primary": "#2449E8",
+    "onPrimary": "#F5F4F0",
+    "accent": "#DDF06A",
+    "secondary": "#CABBEA",
+    "surface": "#FFFFFF"
+  },
+  "typography": {
+    "display": {
+      "family": "Sora",
+      "weight": 600
+    },
+    "body": {
+      "family": "Manrope",
+      "weight": 400
+    },
+    "bodyPx": 18,
+    "bodyLineHeight": 1.6,
+    "desktopH1Px": 64,
+    "mobileH1Px": 40,
+    "h2DesktopPx": 36,
+    "h2MobilePx": 28,
+    "h3Px": 24,
+    "smallPx": 14
+  },
+  "spacingPx": [
+    4,
+    8,
+    12,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96
+  ],
+  "radiusPx": 4,
+  "layout": {
+    "maxContentWidthPx": 1120,
+    "desktopGutterPx": 48,
+    "mobileGutterPx": 24,
+    "logoClearSpace": "At least half the capital A height on all sides",
+    "wordmarkMinScreenWidthPx": 160,
+    "initialsMinScreenWidthPx": 32
+  },
+  "files": {
+    "linkedinBanner": "../templates/Andre_Perez_LinkedIn_Banner_1584x396.png",
+    "favicon": "../logo/favicon.svg"
+  }
+}
