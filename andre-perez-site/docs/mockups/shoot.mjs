@@ -3,7 +3,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
-for (const d of ['a','b','c']) {
+for (const d of ['a','b','c','d']) {
   for (const [name, w] of [['desktop',1280],['phone',375]]) {
     const page = await browser.newPage({ viewport: { width: w, height: 900 }, deviceScaleFactor: 1 });
     await page.goto('file://' + path.join(here, `direction-${d}.html`));

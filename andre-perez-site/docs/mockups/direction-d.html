@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction D: One-page, reference layout in the brand</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.site-header{position:sticky;top:0;background:var(--bone);border-bottom:1px solid var(--lilac);padding:var(--s4) 0;z-index:5}
+.hero{min-height:calc(100vh - 80px);display:grid;align-items:center;padding:var(--s16) 0}
+.hero .container{display:grid;grid-template-columns:8fr 4fr;gap:var(--s12);align-items:center}
+.hero .descriptor{font-weight:600;margin:0 0 var(--s4)}
+.hero .contact{list-style:none;padding:0;margin:var(--s8) 0 0;display:flex;gap:var(--s6);font-size:14px;flex-wrap:wrap}
+.hero .motif{justify-self:end}
+.sec{padding:var(--s24) 0}
+.sec .container{display:grid;grid-template-columns:4fr 8fr;gap:var(--s12);align-items:start}
+.sec h2{font-size:clamp(40px,5vw,64px);margin:0}
+.sec .bar{width:72px;height:4px;background:var(--cobalt);border-radius:var(--radius);margin-top:var(--s3)}
+.sec .sticky{position:sticky;top:96px}
+.card{border:1px solid var(--night);border-radius:var(--radius);padding:var(--s6);margin-bottom:var(--s6)}
+.card .num{color:var(--cobalt);font-size:14px;font-weight:600;letter-spacing:.08em}
+.card h3{margin:var(--s2) 0 var(--s3)}
+.card p{margin:0 0 var(--s3)}
+.card .tags{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s4)}
+.skills{display:flex;gap:var(--s2);flex-wrap:wrap;margin-top:var(--s6)}
+.skills .tag{text-transform:none;letter-spacing:0;font-weight:600}
+/* timeline */
+.tl{position:relative;padding-left:var(--s8)}
+.tl:before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--cobalt)}
+.tl .card{position:relative}
+.tl .card:before{content:"";position:absolute;left:-31px;top:28px;width:14px;height:14px;border-radius:50%;background:var(--cobalt);border:2px solid var(--bone)}
+.tl .head{display:flex;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;align-items:baseline}
+.tl .head p{margin:0}
+.tl .employer{color:var(--cobalt);font-weight:600}
+.tl .dates{font-size:14px}
+.tl ul{margin:var(--s4) 0 0;padding-left:1.2em}
+.tl li{margin-bottom:var(--s2)}
+.edu .head{display:flex;justify-content:space-between;gap:var(--s4);flex-wrap:wrap;align-items:baseline}
+.edu .school{color:var(--cobalt);font-weight:600;margin:0}
+.edu .dates{font-size:14px}
+.about p:first-of-type{font-size:22px;line-height:1.5}
+.site-footer .wordmark{width:160px}
+@media(max-width:768px){.hero{min-height:0;padding:var(--s12) 0 var(--s16)}.hero .container,.sec .container{grid-template-columns:1fr}.hero .motif{justify-self:start;order:-1}.hero .motif svg{width:100px}.sec{padding:var(--s16) 0}.sec .sticky{position:static;margin-bottom:var(--s6)}.site-header .container{flex-direction:column;align-items:flex-start;gap:var(--s3)}.nav li:nth-child(n+3){display:list-item}.nav{gap:var(--s4);font-size:16px}}
+</style></head><body>
+<header class="site-header"><div class="container">
+  <a href="#"><img class="wordmark" src="../../brand/logo/wordmark-ink.svg" alt="Andre Perez, home"></a>
+  <nav><ul class="nav"><li><a href="#about">About</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li></ul></nav>
+</div></header>
+<main id="main">
+<section class="hero"><div class="container">
+  <div>
+    <p class="descriptor">Business operations / Digital commerce / Practical technology</p>
+    <h1>Better systems.<br>Smoother operations.</h1>
+    <p>For teams whose processes have outgrown their tools, I connect the business need to a practical system, and I document it so it keeps working after I hand it off.</p>
+    <div class="btn-row"><a class="btn" href="#work">See the work</a><a class="btn secondary" href="#">Download resume</a></div>
+    <ul class="contact"><li><a href="#">helloandreperez@outlook.com</a></li><li><a href="#">linkedin.com/in/andregperez</a></li><li>Miami, FL</li></ul>
+  </div>
+  <div class="motif" aria-hidden="true"><svg class="motif-anim" width="159" height="128" viewBox="0 0 159 128"><rect x="0" y="68" width="28.9" height="59.5" fill="#2449E8"/><rect x="39.95" y="34" width="28.9" height="59.5" fill="#2449E8"/><rect x="79.9" y="0" width="28.9" height="59.5" fill="#2449E8"/><circle cx="144.5" cy="25.5" r="14.45" fill="#CABBEA"/></svg></div>
+</div></section>
+
+<section class="sec about" id="about"><div class="container">
+  <div class="sticky"><h2>About me.</h2><div class="bar"></div></div>
+  <div>
+    <p>I work where business operations meet digital tools. In grocery ecommerce I keep delivery partners, product data and platforms in sync. My habit is spotting the process that keeps breaking, then building the tool that fixes it, usually before anyone asks.</p>
+    <p>Find the friction. Build the fix. Leave a system people can run.</p>
+    <p class="small">Bilingual: English / Spanish. BBA in Management Information Systems, Florida International University.</p>
+    <p class="label cobalt" style="margin-top:32px">Skills and tools</p>
+    <div class="skills"><span class="tag">Business requirements</span><span class="tag">Functional QA and UAT</span><span class="tag">Operational data analysis</span><span class="tag">Process documentation</span><span class="tag">Invoice reconciliation</span><span class="tag">Shopify</span><span class="tag">DoorDash</span><span class="tag">Uber Eats</span><span class="tag">Shipt</span><span class="tag">Freshop (NCR Voyix)</span><span class="tag">Excel</span><span class="tag">Microsoft Forms</span><span class="tag">HighRadius</span><span class="tag">monday.com</span><span class="tag">Claude</span><span class="tag">HTML and CSS</span></div>
+  </div>
+</div></section>
+
+<section class="sec on-night" id="work"><div class="container">
+  <div class="sticky"><h2>Work.</h2><div class="bar" style="background:var(--citron)"></div><p class="small" style="margin-top:24px">Each project shows the problem, my part, and the evidence. Learning projects are labeled.</p></div>
+  <div>
+    <article class="card" style="border-color:var(--bone)">
+      <p class="num">01 / Work project</p><h3>Weekly flyer QA tool.</h3>
+      <p><strong>Problem.</strong> Flyer items had to be checked against the source file by hand every week.</p>
+      <p><strong>My part.</strong> Built a single-file HTML tool that matches items and flags mismatches before launch.</p>
+      <p><strong>Evidence.</strong> <span class="needs">[NEEDS INPUT: screenshot and one verified result]</span></p>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">JavaScript</span><span class="tag">Excel</span></div>
+    </article>
+    <article class="card" style="border-color:var(--bone)">
+      <p class="num">02 / Work project</p><h3>Cafe item intake form and SOP.</h3>
+      <p><strong>Problem.</strong> New-item requests for Sedano's Cafe arrived in different formats. <span class="needs">[NEEDS INPUT: confirm]</span></p>
+      <p><strong>My part.</strong> Built a Microsoft Forms intake workflow and wrote the publishing SOP.</p>
+      <p><strong>Evidence.</strong> <span class="needs">[NEEDS INPUT: screenshot and one verified result]</span></p>
+      <div class="tags"><span class="tag">Microsoft Forms</span><span class="tag">SOP</span></div>
+    </article>
+    <article class="card" style="border-color:var(--bone)">
+      <p class="num">03 / Work project</p><h3>Email campaign QA standard.</h3>
+      <p><strong>Problem.</strong> Marketing emails were checked without a standard. <span class="needs">[NEEDS INPUT: confirm]</span></p>
+      <p><strong>My part.</strong> Set the checks for source data, imagery, pricing, and market versions.</p>
+      <p><strong>Evidence.</strong> <span class="needs">[NEEDS INPUT: screenshot and one verified result]</span></p>
+      <div class="tags"><span class="tag">Excel</span><span class="tag">QA checklist</span></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="sec" id="experience"><div class="container">
+  <div class="sticky"><h2>Experience.</h2><div class="bar"></div></div>
+  <div class="tl">
+    <article class="card">
+      <div class="head"><div><h3 style="margin:0">eCom Manager</h3><p class="employer">Sedano's Supermarket and Fresco Supermarket (SMRT Solutions, LLC)</p></div><p class="dates">June 2025 to present</p></div>
+      <ul>
+        <li>Execute marketplace operations across DoorDash, Uber Eats, Shipt, and Freshop/NCR Voyix for two supermarket banners, maintaining product content, pricing, promotions, and catalog accuracy across 30,000+ SKUs.</li>
+        <li>Gather and document business requirements; execute functional QA and UAT for ecommerce changes, recording defects and validating fixes.</li>
+        <li>Troubleshoot marketplace and store technology issues, including ordering tablets and receipt printers; communicate directly with IT, vendors, and store teams to resolve escalations.</li>
+        <li>Designed a Microsoft Forms intake workflow and SOP for Sedano's Cafe item publishing; documented store support and escalation procedures.</li>
+      </ul>
+      <p class="small" style="margin:16px 0 0">Four of eight bullets shown. The real page shows all of them from the resume file.</p>
+    </article>
+    <article class="card">
+      <div class="head"><div><h3 style="margin:0">Ecommerce Manager</h3><p class="employer">The Harmony Store</p></div><p class="dates">January 2024 to May 2025</p></div>
+      <ul>
+        <li>Managed Shopify storefront operations, product onboarding, catalog accuracy, pricing, digital merchandising, product imagery, and SEO content.</li>
+        <li>Processed Shopify customer orders, shipping labels, fulfillment statuses, and returns; personally picked, packed, and prepared outgoing shipments.</li>
+        <li>Supported product photography, digital campaigns, social media, events, and early-stage TikTok Shop onboarding.</li>
+      </ul>
+    </article>
+  </div>
+</div></section>
+
+<section class="sec edu" id="education"><div class="container">
+  <div class="sticky"><h2>Education.</h2><div class="bar"></div></div>
+  <div>
+    <article class="card"><div class="head"><div><h3 style="margin:0">Bachelor of Business Administration, Management Information Systems</h3><p class="school">Florida International University</p></div><p class="dates">May 2026</p></div></article>
+    <article class="card"><div class="head"><div><h3 style="margin:0">Associate of Arts, Business Administration</h3><p class="school">Miami Dade College</p></div><p class="dates">July 2022</p></div></article>
+    <p class="label cobalt" style="margin-top:32px">Learning</p>
+    <p class="small"><span class="needs">[NEEDS INPUT: courses and certifications, when there are some]</span></p>
+  </div>
+</div></section>
+</main>
+<footer class="site-footer on-night">
+  <div class="container">
+    <div><img class="wordmark" src="../../brand/logo/wordmark-reverse.svg" alt="Andre Perez"><p class="small" style="margin:0">Better systems. Smoother operations.<br>Bilingual: English / Spanish. Miami, FL.</p></div>
+    <ul class="small"><li><a href="#">helloandreperez@outlook.com</a></li><li><a href="#">linkedin.com/in/andregperez</a></li><li><a href="#">Download resume</a></li></ul>
+  </div>
+</footer>
+</body></html>
