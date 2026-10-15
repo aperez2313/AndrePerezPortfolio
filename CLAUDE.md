@@ -2,7 +2,7 @@
 
 Brand rulebook: `andre-perez-site/brand/BRAND-GUIDELINES.md`. Read it first. The build brief is `andre-perez-site/PROMPT.md`. Work one phase at a time and ask before inventing any fact, metric, or design decision.
 
-Status: Phases 1 and 2 complete on 2026-10-15. Phase 3 brief at `andre-perez-site/docs/01-brief.md` approved (provisional). Phase 4 site map and content model drafted at `andre-perez-site/docs/02-site-map-and-content-model.md`, awaiting approval. No site code exists yet.
+Status: Phases 1 and 2 complete on 2026-10-15. Phase 3 brief at `andre-perez-site/docs/01-brief.md` approved (provisional). Phase 4 site map and content model at `andre-perez-site/docs/02-site-map-and-content-model.md` approved. Phase 5 visual directions at `andre-perez-site/docs/03-visual-directions.md` awaiting Andre's pick (A recommended). No site code exists yet.
 
 ## Decisions so far
 
