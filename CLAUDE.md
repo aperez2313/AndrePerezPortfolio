@@ -2,7 +2,7 @@
 
 Brand rulebook: `andre-perez-site/brand/BRAND-GUIDELINES.md`. Read it first. The build brief is `andre-perez-site/PROMPT.md`. Work one phase at a time and ask before inventing any fact, metric, or design decision.
 
-Status: Phase 1 (audit) complete on 2026-10-15. Phase 2 (discovery interview) not started. No site code exists yet.
+Status: Phases 1 and 2 complete on 2026-10-15. Phase 3 brief drafted at `andre-perez-site/docs/01-brief.md`, awaiting Andre's approval. No site code exists yet.
 
 ## Decisions so far
 
@@ -44,5 +44,12 @@ Status: Phase 1 (audit) complete on 2026-10-15. Phase 2 (discovery interview) no
 - Andre has a ChatGPT prompt (in the chat log) that asks for real headings and bullets. Future files may use either format.
 - Naming convention for new versions: `Andre_Perez_Resume_YYYY-MM-DD.docx`, one DOCX in the folder at a time. Current file: `Andre_Perez_Master_Resume_ATS_Report_Updated.docx`, uploaded 2026-10-14 9:50 PM Miami time (commit c5a4d46).
 
-## Not yet decided
-Everything in Phase 2 of PROMPT.md: audience and goals, positioning placement, which projects to feature and their details, metrics, learning, analytics, timeline. Website tone for Home and About is also undefined (Phase 3).
+### Phase 2 answers (approved, all provisional)
+- Primary audience: recruiters and hiring managers. Secondary: freelance clients, not addressed at launch.
+- Target roles: Ecommerce operations and Business Analyst lead. Customer Success is covered through the Bridge-building value and partner/store support work, not as a separate pitch.
+- 30-second action: open a case study, then download the resume, then contact. Andre wants to see it built and revise.
+- Positioning placement: tagline is the Home headline, positioning statement is the paragraph under it, mission on About, four values on About with a project under each.
+- Freelance: employment-only at launch. No Work With Me page.
+
+## Waiting on Andre (flagged, do not block on these)
+Brag log, project notes and screenshots, portrait, domain name, clearance of work tools for public use, project details and metrics (Phase 2 topics deferred until the brag log exists).
