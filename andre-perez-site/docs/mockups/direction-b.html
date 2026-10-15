@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Direction B: Night opener</title>
+<link rel="stylesheet" href="shared.css">
+<style>
+.site-header.on-night .nav a{color:var(--bone)}
+.site-header.on-night .nav a:hover{text-decoration-color:var(--citron)}
+.hero{min-height:calc(100vh - 100px);display:flex;flex-direction:column;justify-content:flex-end;padding:var(--s12) 0 var(--s16);position:relative}
+.hero .motif{position:absolute;right:var(--s12);top:var(--s8)}
+.hero .descriptor{margin:0 0 var(--s6)}
+.hero .grid{display:grid;grid-template-columns:7fr 5fr;gap:var(--s12);align-items:end}
+.hero .stat{border-top-color:var(--citron)}
+.cards{padding:var(--s16) 0}
+.card{border:1px solid var(--night);border-radius:var(--radius);display:grid;grid-template-columns:1fr 1fr;margin-bottom:var(--s8);overflow:hidden}
+.card.flip .text{order:2}
+.card .text{padding:var(--s8)}
+.card .pic{padding:var(--s8);background:var(--bone)}
+.card .evidence{grid-column:1/-1;order:3;padding:var(--s4) var(--s8);font-size:14px}
+.card .evidence strong{letter-spacing:.08em;text-transform:uppercase;margin-right:var(--s3)}
+.how{padding:var(--s16) 0}
+.how ul{list-style:none;padding:0;margin:0;max-width:65ch}
+.how li{padding:var(--s3) 0;border-top:1px solid var(--lilac)}
+@media(max-width:768px){.hero{min-height:0;padding-top:var(--s24)}.hero .motif{right:var(--s6);top:var(--s6)}.hero .motif svg{width:100px}.hero .grid,.card{grid-template-columns:1fr}.card.flip .text{order:0}}
+</style></head><body>
+<header class="site-header on-night"><div class="container">
+  <a href="#"><img class="wordmark" src="../../brand/logo/wordmark-reverse.svg" alt="Andre Perez, home"></a>
+  <nav><ul class="nav"><li><a href="#">Work</a></li><li><a href="#">Resume</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul></nav>
+</div></header>
+<main id="main">
+<section class="hero on-night">
+  <div class="motif" aria-hidden="true"><svg class="motif-anim" width="159" height="128" viewBox="0 0 159 128"><rect x="0" y="68" width="28.9" height="59.5" fill="#DDF06A"/><rect x="39.95" y="34" width="28.9" height="59.5" fill="#DDF06A"/><rect x="79.9" y="0" width="28.9" height="59.5" fill="#DDF06A"/><circle cx="144.5" cy="25.5" r="14.45" fill="#CABBEA"/></svg></div>
+  <div class="container"><div class="grid">
+    <div>
+      <p class="descriptor">Business operations / Digital commerce / Practical technology</p>
+      <h1>Better systems.<br>Smoother operations.</h1>
+      <p>For teams whose processes have outgrown their tools, I connect the business need to a practical system, and I document it so it keeps working after I hand it off.</p>
+      <div class="btn-row"><a class="btn" href="#">See the work</a><a class="btn secondary" href="#">Download resume</a></div>
+    </div>
+    <div class="stat">
+      <p class="label">Latest fix</p>
+      <p class="big">Flyer items checked by hand every week. Now one tool checks them before launch.</p>
+      <dl class="ctx"><dt>Before</dt><dd>Manual comparison to the source file.</dd><dt>After</dt><dd>The tool lists the mismatches.</dd><dt>Measured</dt><dd><span class="needs">[NEEDS INPUT: timeframe and what changed]</span></dd></dl>
+    </div>
+  </div></div>
+</section>
+
+<section class="cards"><div class="container">
+  <p class="label cobalt">Selected work</p>
+  <article class="card">
+    <div class="text"><span class="tag">Work project</span><h2 style="margin-top:16px">Weekly flyer QA tool.</h2>
+      <dl class="cs"><dt>Problem</dt><dd>Flyer items had to be checked against the source file by hand every week.</dd><dt>My part</dt><dd>Built a single-file HTML tool that matches items and flags mismatches before launch.</dd></dl>
+      <p style="margin-top:24px"><a href="#">Read the case study</a></p></div>
+    <div class="pic"><div class="shot">[NEEDS INPUT: cropped screenshot, data blurred, Cobalt box and numbered Citron marker]</div><p class="caption">1. The tool flags items whose price does not match the source file. <span class="needs">[NEEDS INPUT: confirm caption]</span></p></div>
+    <div class="evidence on-cobalt"><strong>Evidence</strong> <span class="needs">[NEEDS INPUT: one verified result]</span></div>
+  </article>
+  <article class="card flip">
+    <div class="text"><span class="tag">Work project</span><h2 style="margin-top:16px">Cafe item intake form and SOP.</h2>
+      <dl class="cs"><dt>Problem</dt><dd>New-item requests for Sedano's Cafe arrived in different formats. <span class="needs">[NEEDS INPUT: confirm]</span></dd><dt>My part</dt><dd>Built a Microsoft Forms intake workflow and wrote the publishing SOP.</dd></dl>
+      <p style="margin-top:24px"><a href="#">Read the case study</a></p></div>
+    <div class="pic"><div class="shot">[NEEDS INPUT: cropped screenshot]</div><p class="caption"><span class="needs">[NEEDS INPUT: caption]</span></p></div>
+    <div class="evidence on-cobalt"><strong>Evidence</strong> <span class="needs">[NEEDS INPUT: one verified result]</span></div>
+  </article>
+  <p><a href="#">All work</a></p>
+</div></section>
+
+<section class="how"><div class="container">
+  <p class="label cobalt">How I work</p>
+  <h2>Find the friction. Build the fix. Leave a system people can run.</h2>
+  <ul>
+    <li>Two supermarket banners, three delivery partners, one storefront, and a catalog that has to match on all of them. That is the job.</li>
+    <li>When the same problem comes back a third time, I stop fixing it by hand and build the check.</li>
+    <li>I write the steps down so the store can run it without calling me.</li>
+  </ul>
+  <p style="margin-top:24px"><a href="#">More about how I work</a></p>
+</div></section>
+</main>
+<footer class="site-footer on-night">
+  <div class="container">
+    <div><img class="wordmark" src="../../brand/logo/wordmark-reverse.svg" alt="Andre Perez"><p class="small" style="margin:0">Better systems. Smoother operations.<br>Bilingual: English / Spanish. Miami, FL.</p></div>
+    <ul class="small"><li><a href="#">helloandreperez@outlook.com</a></li><li><a href="#">linkedin.com/in/andregperez</a></li><li><a href="#">Download resume</a></li></ul>
+  </div>
+</footer>
+</body></html>
