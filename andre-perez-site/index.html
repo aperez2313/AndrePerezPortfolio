@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#2449E8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Brand fonts are self-hosted. Preloading them avoids a flash of the fallback font in the hero. -->
+    <link rel="preload" href="/fonts/Sora-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!--
+      Default metadata. Each page replaces the title and description at runtime (see src/components/Seo.tsx).
+      These defaults are what link previews (LinkedIn, Slack, iMessage) read, because those scrapers do not run JavaScript.
+      TODO(andre): once a domain is chosen, add <link rel="canonical"> and make og:url and og:image absolute URLs.
+    -->
+    <title>Andre Perez | Business operations, digital commerce, practical technology</title>
+    <meta
+      name="description"
+      content="Andre Perez is a Miami-based digital commerce and operations professional who makes complex workflows clearer, more efficient and easier to manage."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Andre Perez" />
+    <meta property="og:title" content="Andre Perez | Better systems. Smoother operations." />
+    <meta
+      property="og:description"
+      content="Digital commerce and operations professional in Miami, focused on clearer workflows and practical systems."
+    />
+    <meta property="og:image" content="/brand/Andre_Perez_LinkedIn_Banner_1584x396.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="font-family: sans-serif; padding: 24px">
+        Andre Perez. Better systems. Smoother operations. This site needs JavaScript. You can reach me at
+        <a href="mailto:helloandreperez@outlook.com">helloandreperez@outlook.com</a>.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
