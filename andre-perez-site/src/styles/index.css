@@ -1,0 +1,241 @@
+@import 'tailwindcss';
+
+/*
+  Design tokens. Source of truth: brand/BRAND-GUIDELINES.md and brand/web/brand-tokens.json.
+
+  `--color-*: initial` removes Tailwind's default palette, so only the five brand colors exist in
+  this codebase. If someone types `bg-red-500`, it does nothing. That enforces "only these five
+  colors" in code, not just in a document.
+*/
+@theme {
+  --color-*: initial;
+  --color-bone: #f5f4f0;
+  --color-night: #141820;
+  --color-cobalt: #2449e8;
+  --color-citron: #ddf06a;
+  --color-lilac: #cabbea;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-*: initial;
+  --font-display: 'Sora', 'Arial', sans-serif;
+  --font-body: 'Manrope', 'Arial', sans-serif;
+
+  /* Type scale from brand-tokens.json, fluid between mobile and desktop values. */
+  --text-small: 0.875rem; /* 14px */
+  --text-small--line-height: 1.5;
+  --text-body: 1.125rem; /* 18px */
+  --text-body--line-height: 1.6;
+  --text-lead: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --text-lead--line-height: 1.45;
+  --text-h3: 1.5rem; /* 24px */
+  --text-h3--line-height: 1.3;
+  --text-h2: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem); /* 28px to 36px */
+  --text-h2--line-height: 1.15;
+  --text-h1: clamp(2.5rem, 1.8rem + 2.6vw, 4rem); /* 40px to 64px */
+  --text-h1--line-height: 1.15;
+  /* Section headings in narrower columns: big enough to lead, small enough to stay within three lines. */
+  --text-section: clamp(2rem, 1.5rem + 1.6vw, 3rem);
+  --text-section--line-height: 1.15;
+  --text-stat: clamp(3.5rem, 2.4rem + 4vw, 6.5rem);
+  --text-stat--line-height: 1;
+
+  --radius-brand: 4px;
+
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 100rem; /* 1600px */
+
+  --ease-brand: cubic-bezier(0.2, 0.7, 0.1, 1);
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-latin.woff2') format('woff2');
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('/fonts/Manrope-latin.woff2') format('woff2');
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    background: var(--color-bone);
+    color: var(--color-night);
+    font-family: var(--font-body);
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-citron);
+    color: var(--color-night);
+  }
+
+  /* 3px Cobalt focus ring on light surfaces. Dark surfaces override it with `.surface-dark`. */
+  :focus-visible {
+    outline: 3px solid var(--color-cobalt);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+}
+
+@layer components {
+  /*
+    Cobalt on Night is 2.7:1, which fails for a focus ring. On Night and Cobalt surfaces the ring
+    switches to Bone (Bone on Night 16:1, Bone on Cobalt 6:1).
+  */
+  .surface-dark :focus-visible,
+  .surface-cobalt :focus-visible {
+    outline-color: var(--color-bone);
+  }
+
+  /* Labels: Manrope 600, all caps, tracking 0.1em (the V4 guide wins over styles.css's 0.06em). */
+  .label {
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .container-brand {
+    width: 100%;
+    max-width: calc(1120px + 2 * 48px);
+    margin-inline: auto;
+    padding-inline: 24px;
+
+    @media (width >= 48rem) {
+      padding-inline: 48px;
+    }
+  }
+
+  /* Wide pages get more room at 1600px and up, so the hero can breathe without stretching body text. */
+  .container-wide {
+    width: 100%;
+    max-width: calc(1440px + 2 * 64px);
+    margin-inline: auto;
+    padding-inline: 24px;
+
+    @media (width >= 48rem) {
+      padding-inline: 48px;
+    }
+    @media (width >= 100rem) {
+      padding-inline: 64px;
+    }
+  }
+
+  /* Text link with an underline that thickens on hover. */
+  .link-underline {
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+    transition: text-decoration-thickness 150ms var(--ease-brand);
+
+    &:hover {
+      text-decoration-thickness: 3px;
+    }
+  }
+
+  /* Graph-paper fill for placeholder visuals. Night at low opacity so it reads as a tint, not a new color. */
+  .graph-paper {
+    background-color: var(--color-bone);
+    background-image:
+      linear-gradient(to right, rgb(20 24 32 / 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(20 24 32 / 0.07) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+/* Hero entrance. Runs once on load. Turned off entirely for people who ask for reduced motion. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.35em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes step-up {
+  from {
+    transform: translateY(40%);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes dot-arrive {
+  from {
+    transform: translateX(-60%);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-rise {
+    animation: rise 700ms var(--ease-brand) both;
+    animation-delay: var(--delay, 0ms);
+  }
+
+  .motif-animate .motif-bar {
+    animation: step-up 520ms var(--ease-brand) both;
+  }
+  .motif-animate .motif-bar:nth-of-type(1) {
+    animation-delay: 450ms;
+  }
+  .motif-animate .motif-bar:nth-of-type(2) {
+    animation-delay: 600ms;
+  }
+  .motif-animate .motif-bar:nth-of-type(3) {
+    animation-delay: 750ms;
+  }
+  .motif-animate .motif-dot {
+    animation: dot-arrive 600ms var(--ease-brand) 1000ms both;
+  }
+}
